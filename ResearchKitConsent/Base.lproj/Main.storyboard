@@ -82,11 +82,22 @@
                                     <segue destination="amv-TM-yyS" kind="show" identifier="returnToConsent" id="oFs-uU-e5A"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvS-Cp-plf">
+                                <rect key="frame" x="105.5" y="100" width="163" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Consent Document"/>
+                                <connections>
+                                    <action selector="consentButtonTapped:" destination="kzu-fe-xof" eventType="touchUpInside" id="rhd-Xd-PYx"/>
+                                    <action selector="joinButtonTapped:" destination="amv-TM-yyS" eventType="touchUpInside" id="cGS-cl-mCE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V3c-VX-2Xj" firstAttribute="bottom" secondItem="Gc3-fT-QWJ" secondAttribute="bottom" constant="120" id="Arg-gw-MY6"/>
                             <constraint firstItem="Gc3-fT-QWJ" firstAttribute="centerX" secondItem="LFX-oP-wrT" secondAttribute="centerX" id="h1t-cx-Pkk"/>
+                            <constraint firstItem="KvS-Cp-plf" firstAttribute="centerX" secondItem="LFX-oP-wrT" secondAttribute="centerX" id="h5F-uW-VUC"/>
+                            <constraint firstItem="KvS-Cp-plf" firstAttribute="top" secondItem="V3c-VX-2Xj" secondAttribute="top" constant="80" id="qqu-ld-7Xy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V3c-VX-2Xj"/>
                     </view>
@@ -97,6 +108,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KBW-MG-AmJ"/>
+        <segue reference="oFs-uU-e5A"/>
     </inferredMetricsTieBreakers>
 </document>

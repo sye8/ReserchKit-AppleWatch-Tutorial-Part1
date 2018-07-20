@@ -32,6 +32,14 @@ extension ConsentViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason{
             case .completed:
+                let signatureResult: ORKConsentSignatureResult = taskViewController.result.stepResult(forStepIdentifier: "ConsentReviewStep")?.firstResult as! ORKConsentSignatureResult
+                let consentDocument = ConsentDocument.copy() as! ORKConsentDocument
+                signatureResult.apply(to: consentDocument)
+                consentDocument.makePDF{ (data, error) -> Void in
+                    var docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last
+                    docURL = docURL?.appendingPathComponent("consent.pdf")
+                    try? data?.write(to: docURL!, options: .atomicWrite)
+                }
                 performSegue(withIdentifier: "unwindToTasks", sender: nil)
             case .discarded, .failed, .saved:
                 dismiss(animated: true, completion: nil)

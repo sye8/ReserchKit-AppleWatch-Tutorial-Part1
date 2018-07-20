@@ -17,6 +17,10 @@ public var ConsentTask: ORKOrderedTask{
     let visualConsentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
     steps += [visualConsentStep]
     
+    //Request Health Data
+    let healthDataStep = HealthDataStep(identifier: "Health")
+    steps += [healthDataStep]
+    
     //Review & Sign
     let signature = consentDocument.signatures!.first!
     let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)

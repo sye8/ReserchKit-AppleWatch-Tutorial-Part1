@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7303B3721021A1B00B82ACE /* HealthDataAuthStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7303B3621021A1B00B82ACE /* HealthDataAuthStep.swift */; };
+		C7303B3B21021C0E00B82ACE /* HealthDataAuthStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7303B3A21021C0E00B82ACE /* HealthDataAuthStepViewController.swift */; };
+		C7303B3F21021E1400B82ACE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7303B3E21021E1400B82ACE /* HealthKit.framework */; };
 		C75D8FC72101D1FB001271AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D8FC62101D1FB001271AC /* AppDelegate.swift */; };
 		C75D8FCC2101D1FB001271AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75D8FCA2101D1FB001271AC /* Main.storyboard */; };
 		C75D8FCE2101D1FB001271AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75D8FCD2101D1FB001271AC /* Assets.xcassets */; };
@@ -75,6 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C7303B3621021A1B00B82ACE /* HealthDataAuthStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataAuthStep.swift; sourceTree = "<group>"; };
+		C7303B3A21021C0E00B82ACE /* HealthDataAuthStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataAuthStepViewController.swift; sourceTree = "<group>"; };
+		C7303B3C21021E1400B82ACE /* ResearchKitConsent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResearchKitConsent.entitlements; sourceTree = "<group>"; };
+		C7303B3E21021E1400B82ACE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C75D8FC32101D1FB001271AC /* ResearchKitConsent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResearchKitConsent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75D8FC62101D1FB001271AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75D8FCB2101D1FB001271AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C75D90072101F6B8001271AC /* ResearchKit.framework in Frameworks */,
+				C7303B3F21021E1400B82ACE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7303B3D21021E1400B82ACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7303B3E21021E1400B82ACE /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C75D8FBA2101D1FB001271AC = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 				C75D8FDA2101D1FB001271AC /* ResearchKitConsentTests */,
 				C75D8FE52101D1FB001271AC /* ResearchKitConsentUITests */,
 				C75D8FC42101D1FB001271AC /* Products */,
+				C7303B3D21021E1400B82ACE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +162,7 @@
 		C75D8FC52101D1FB001271AC /* ResearchKitConsent */ = {
 			isa = PBXGroup;
 			children = (
+				C7303B3C21021E1400B82ACE /* ResearchKitConsent.entitlements */,
 				C75D8FF52101F0CA001271AC /* Intro */,
 				C75D8FFA2101F61A001271AC /* Consent */,
 				C75D8FC62101D1FB001271AC /* AppDelegate.swift */,
@@ -189,6 +207,8 @@
 				C75D8FFB2101F630001271AC /* ConsentViewController.swift */,
 				C75D900D2102009C001271AC /* ConsentDocument.swift */,
 				C75D900F210200A5001271AC /* ConsentTask.swift */,
+				C7303B3621021A1B00B82ACE /* HealthDataAuthStep.swift */,
+				C7303B3A21021C0E00B82ACE /* HealthDataAuthStepViewController.swift */,
 			);
 			path = Consent;
 			sourceTree = "<group>";
@@ -273,6 +293,11 @@
 					C75D8FC22101D1FB001271AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					C75D8FD62101D1FB001271AC = {
 						CreatedOnToolsVersion = 9.2;
@@ -364,8 +389,10 @@
 				C75D8FF72101F0DF001271AC /* IntroViewController.swift in Sources */,
 				C75D8FF92101F34A001271AC /* IntroSegue.swift in Sources */,
 				C75D8FC72101D1FB001271AC /* AppDelegate.swift in Sources */,
+				C7303B3721021A1B00B82ACE /* HealthDataAuthStep.swift in Sources */,
 				C75D9010210200A5001271AC /* ConsentTask.swift in Sources */,
 				C75D8FFC2101F630001271AC /* ConsentViewController.swift in Sources */,
+				C7303B3B21021C0E00B82ACE /* HealthDataAuthStepViewController.swift in Sources */,
 				C75D900E2102009C001271AC /* ConsentDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +565,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResearchKitConsent/ResearchKitConsent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5BU57S6W;
 				INFOPLIST_FILE = ResearchKitConsent/Info.plist;
@@ -554,6 +582,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResearchKitConsent/ResearchKitConsent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5BU57S6W;
 				INFOPLIST_FILE = ResearchKitConsent/Info.plist;

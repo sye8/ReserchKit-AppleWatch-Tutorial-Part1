@@ -32,4 +32,12 @@ extension ConsentViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func taskViewController(_ taskViewController: ORKTaskViewController, viewControllerFor step: ORKStep) -> ORKStepViewController? {
+        if step is HealthDataStep {
+            let healthStepViewController = HealthDataAuthStepViewController(step: step)
+            return healthStepViewController
+        }
+        return nil
+    }
 }

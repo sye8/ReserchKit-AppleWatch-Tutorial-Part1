@@ -28,6 +28,11 @@ public var ConsentTask: ORKOrderedTask{
     reviewConsentStep.reasonForConsent = "Consent to join study"
     steps += [reviewConsentStep]
     
+    //Passcode/TouchID Protection
+    let passcodeStep = ORKPasscodeStep(identifier: "Passcode")
+    passcodeStep.text = "Now you will create a passcode to identify yourself to the app and protect access to information you've entered."
+    steps += [passcodeStep]
+    
     //Completion
     let completionStep = ORKCompletionStep(identifier: "CompletionStep")
     completionStep.title = "Welcome aboard."

@@ -22,7 +22,7 @@
                     </view>
                     <connections>
                         <segue destination="amv-TM-yyS" kind="custom" identifier="toConsent" customClass="IntroSegue" customModule="ResearchKitConsent" customModuleProvider="target" id="KBW-MG-AmJ"/>
-                        <segue destination="kzu-fe-xof" kind="custom" identifier="toTasks" id="uaC-GA-6sy"/>
+                        <segue destination="kzu-fe-xof" kind="custom" identifier="toTasks" customClass="IntroSegue" customModule="ResearchKitConsent" customModuleProvider="target" id="uaC-GA-6sy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

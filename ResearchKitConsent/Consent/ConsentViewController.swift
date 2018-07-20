@@ -30,7 +30,13 @@ class ConsentViewController: UIViewController{
 
 extension ConsentViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
-        dismiss(animated: true, completion: nil)
+        switch reason{
+            case .completed:
+                performSegue(withIdentifier: "unwindToTasks", sender: nil)
+            case .discarded, .failed, .saved:
+                dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     func taskViewController(_ taskViewController: ORKTaskViewController, viewControllerFor step: ORKStep) -> ORKStepViewController? {

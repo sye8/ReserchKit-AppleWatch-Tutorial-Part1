@@ -1,0 +1,35 @@
+//
+//  ConsentViewController.swift
+//  ResearchKitConsent
+//
+//  Created by 叶思帆 on 20/07/2018.
+//  Copyright © 2018 Sifan Ye. All rights reserved.
+//
+
+import ResearchKit
+
+class ConsentViewController: UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func joinButtonTapped(_ sender: UIButton) {
+        let taskViewController = ORKTaskViewController(task: ConsentTask, taskRun: nil)
+        taskViewController.delegate = self
+        present(taskViewController, animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+extension ConsentViewController: ORKTaskViewControllerDelegate{
+    func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+}

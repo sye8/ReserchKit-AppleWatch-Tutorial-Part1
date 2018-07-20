@@ -1,0 +1,34 @@
+//
+//  ConsentTask.swift
+//  ResearchKitConsent
+//
+//  Created by 叶思帆 on 20/07/2018.
+//  Copyright © 2018 Sifan Ye. All rights reserved.
+//
+
+import ResearchKit
+
+public var ConsentTask: ORKOrderedTask{
+    
+    var steps = [ORKStep]()
+
+    //Visualization
+    let consentDocument = ConsentDocument
+    let visualConsentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
+    steps += [visualConsentStep]
+    
+    //Review & Sign
+    let signature = consentDocument.signatures!.first!
+    let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)
+    reviewConsentStep.text = "Review the consent form."
+    reviewConsentStep.reasonForConsent = "Consent to join study"
+    steps += [reviewConsentStep]
+    
+    //Completion
+    let completionStep = ORKCompletionStep(identifier: "CompletionStep")
+    completionStep.title = "Welcome aboard."
+    completionStep.text = "Thank you for joining this study."
+    steps += [completionStep]
+    
+    return ORKOrderedTask(identifier: "ConsentTask", steps: steps)
+}

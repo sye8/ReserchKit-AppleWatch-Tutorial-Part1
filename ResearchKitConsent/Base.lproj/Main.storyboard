@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="44" y="90"/>
         </scene>
-        <!--View Controller-->
+        <!--Consent View Controller-->
         <scene sceneID="Hd4-q8-Jak">
             <objects>
-                <viewController id="amv-TM-yyS" sceneMemberID="viewController">
+                <viewController id="amv-TM-yyS" customClass="ConsentViewController" customModule="ResearchKitConsent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xN4-RD-WDq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                 <rect key="frame" x="142.5" y="513" width="90" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Join Study"/>
+                                <connections>
+                                    <action selector="joinButtonTapped:" destination="amv-TM-yyS" eventType="touchUpInside" id="MAP-bk-p8E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

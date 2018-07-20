@@ -53,19 +53,41 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dsR-H2-8io"/>
                     </view>
+                    <connections>
+                        <segue destination="eix-UX-vrn" kind="unwind" identifier="unwindToTasks" unwindAction="unwindToTasks:" id="wAr-WD-vTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lc-WP-1hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eix-UX-vrn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1013.6" y="-321.58920539730138"/>
         </scene>
-        <!--View Controller-->
+        <!--Tasks View Controller-->
         <scene sceneID="OeK-5t-fEa">
             <objects>
-                <viewController id="kzu-fe-xof" sceneMemberID="viewController">
+                <viewController id="kzu-fe-xof" customClass="TasksViewController" customModule="ResearchKitConsent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LFX-oP-wrT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gc3-fT-QWJ">
+                                <rect key="frame" x="135" y="513" width="104" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Leave Study">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinButtonTapped:" destination="amv-TM-yyS" eventType="touchUpInside" id="XO1-Yi-HaL"/>
+                                    <action selector="leaveButtonTapped:" destination="kzu-fe-xof" eventType="touchUpInside" id="e0E-l4-00C"/>
+                                    <segue destination="amv-TM-yyS" kind="show" identifier="returnToConsent" id="oFs-uU-e5A"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V3c-VX-2Xj" firstAttribute="bottom" secondItem="Gc3-fT-QWJ" secondAttribute="bottom" constant="120" id="Arg-gw-MY6"/>
+                            <constraint firstItem="Gc3-fT-QWJ" firstAttribute="centerX" secondItem="LFX-oP-wrT" secondAttribute="centerX" id="h1t-cx-Pkk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V3c-VX-2Xj"/>
                     </view>
                 </viewController>
@@ -74,4 +96,7 @@
             <point key="canvasLocation" x="1014" y="513"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KBW-MG-AmJ"/>
+    </inferredMetricsTieBreakers>
 </document>

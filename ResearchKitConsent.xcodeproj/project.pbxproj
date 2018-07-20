@@ -10,6 +10,7 @@
 		C7303B3721021A1B00B82ACE /* HealthDataAuthStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7303B3621021A1B00B82ACE /* HealthDataAuthStep.swift */; };
 		C7303B3B21021C0E00B82ACE /* HealthDataAuthStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7303B3A21021C0E00B82ACE /* HealthDataAuthStepViewController.swift */; };
 		C7303B3F21021E1400B82ACE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7303B3E21021E1400B82ACE /* HealthKit.framework */; };
+		C7303B4221023F7300B82ACE /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7303B4121023F7300B82ACE /* TasksViewController.swift */; };
 		C75D8FC72101D1FB001271AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75D8FC62101D1FB001271AC /* AppDelegate.swift */; };
 		C75D8FCC2101D1FB001271AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75D8FCA2101D1FB001271AC /* Main.storyboard */; };
 		C75D8FCE2101D1FB001271AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75D8FCD2101D1FB001271AC /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		C7303B3A21021C0E00B82ACE /* HealthDataAuthStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataAuthStepViewController.swift; sourceTree = "<group>"; };
 		C7303B3C21021E1400B82ACE /* ResearchKitConsent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResearchKitConsent.entitlements; sourceTree = "<group>"; };
 		C7303B3E21021E1400B82ACE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C7303B4121023F7300B82ACE /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		C75D8FC32101D1FB001271AC /* ResearchKitConsent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResearchKitConsent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75D8FC62101D1FB001271AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75D8FCB2101D1FB001271AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C7303B4021023F5200B82ACE /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				C7303B4121023F7300B82ACE /* TasksViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		C75D8FBA2101D1FB001271AC = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 				C7303B3C21021E1400B82ACE /* ResearchKitConsent.entitlements */,
 				C75D8FF52101F0CA001271AC /* Intro */,
 				C75D8FFA2101F61A001271AC /* Consent */,
+				C7303B4021023F5200B82ACE /* Tasks */,
 				C75D8FC62101D1FB001271AC /* AppDelegate.swift */,
 				C75D8FCA2101D1FB001271AC /* Main.storyboard */,
 				C75D8FCD2101D1FB001271AC /* Assets.xcassets */,
@@ -394,6 +405,7 @@
 				C75D8FFC2101F630001271AC /* ConsentViewController.swift in Sources */,
 				C7303B3B21021C0E00B82ACE /* HealthDataAuthStepViewController.swift in Sources */,
 				C75D900E2102009C001271AC /* ConsentDocument.swift in Sources */,
+				C7303B4221023F7300B82ACE /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

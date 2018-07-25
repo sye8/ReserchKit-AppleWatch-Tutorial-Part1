@@ -77,7 +77,6 @@
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="joinButtonTapped:" destination="amv-TM-yyS" eventType="touchUpInside" id="XO1-Yi-HaL"/>
                                     <action selector="leaveButtonTapped:" destination="kzu-fe-xof" eventType="touchUpInside" id="e0E-l4-00C"/>
                                     <segue destination="amv-TM-yyS" kind="show" identifier="returnToConsent" id="oFs-uU-e5A"/>
                                 </connections>
@@ -88,7 +87,6 @@
                                 <state key="normal" title="Consent Document"/>
                                 <connections>
                                     <action selector="consentButtonTapped:" destination="kzu-fe-xof" eventType="touchUpInside" id="rhd-Xd-PYx"/>
-                                    <action selector="joinButtonTapped:" destination="amv-TM-yyS" eventType="touchUpInside" id="cGS-cl-mCE"/>
                                 </connections>
                             </button>
                         </subviews>
